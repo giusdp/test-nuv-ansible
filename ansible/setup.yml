@@ -21,7 +21,7 @@
   tasks:
   - name: "Ansible | Print playbook dir"
     debug:
-      msg: "The operating system is {{ playbook_dir }}"
+      msg: "THe playbook dir is {{ playbook_dir }}"
   # Generate hosts files
   - name: gen hosts if 'local' env is used
     local_action: template src="{{ playbook_dir }}/environments/local/hosts.j2.ini" dest="{{ playbook_dir }}/environments/local/hosts"
