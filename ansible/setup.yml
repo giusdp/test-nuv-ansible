@@ -22,7 +22,8 @@
   connection: local
   tasks:
   - name: "Ansible | Print playbook dir"
-    debug: var=ansible_local
+    debug:
+      msg: "The playbook dir is {{ playbook_dir }}"
 
   # Generate hosts files
   - name: gen hosts if 'local' env is used
