@@ -17,11 +17,10 @@
 ---
 # This playbook prepares ansible configuration
 
-- hosts: localhost
+- hosts: all
   tasks:
   - name: "Ansible | Print playbook dir"
-    debug:
-      msg: "The playbook dir is {{ playbook_dir }}"
+    debug: var=ansible_local
 
   # Generate hosts files
   - name: gen hosts if 'local' env is used
