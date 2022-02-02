@@ -17,7 +17,9 @@
 ---
 # This playbook prepares ansible configuration
 
-- hosts: all
+- name: "Setup couchdb init job"
+  hosts: localhost
+  connection: local
   tasks:
   - name: "Ansible | Print playbook dir"
     debug: var=ansible_local
